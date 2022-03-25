@@ -1,0 +1,17 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #060605;
+$background-color: #f6edd9;
+
+%header-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+@mixin flex-dis {
+    display: flex;
+}
+
+@mixin weight-font($weight-size) {
+    font-weight: $weight-size;
+}

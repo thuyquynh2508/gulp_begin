@@ -1,0 +1,61 @@
+@import "./_base.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-family: $font-stack;
+}
+
+body {
+    background-color: $background-color;
+}
+.main {
+    padding: 30px 50px;
+}
+
+.header-nav {
+    @include flex-dis;
+    justify-content: space-between;
+} 
+
+.header-nav {
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 32px;
+        @include weight-font(600);
+    }
+    ul {
+        @include flex-dis;
+    }
+    li {
+        list-style: none;
+        @extend %header-btn;
+    }
+    button {
+        @extend %header-btn;
+        box-shadow: 1px 1px 2px rgba($color: $primary-color, $alpha: 0.4);
+        @include weight-font(600);
+    }
+}
+
+.header-nav.news #news {
+    @include weight-font(700);
+    border-bottom: 1px solid $primary-color;
+}
+
+.content-header {
+    font-size: 40px;
+    text-align: center;
+    padding: 50px 0px;
+    @include weight-font(700);
+}
+
+.content-body div {
+    text-align: justify;
+    line-height: 1.5;
+}
